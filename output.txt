@@ -1,0 +1,3 @@
+Name: manav
+Age: 19
+Squared Age: 361

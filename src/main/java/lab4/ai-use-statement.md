@@ -1,1 +1,1 @@
-I used GitHub Copilot completions and conversations to complete this lab.
+I used chatgpt Copilot completions and conversations to complete this lab.

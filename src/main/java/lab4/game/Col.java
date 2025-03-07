@@ -4,7 +4,7 @@ package lab4.game;
  * Represents the column position of a tictactoe board location
  */
 public enum Col {
-    Left, Middle, Right;
+    Left, Middle, Right, M, L;
 
     /**
      * @param str A string representation of a column position

@@ -1,0 +1,1 @@
+I used GitHub Copilot completions and conversations to complete this lab, and my conversations are copied below.

@@ -1,9 +1,10 @@
 package lab4;
-
+import com.diogonunes.jcolor.Attribute;
+import static com.diogonunes.jcolor.Ansi.colorize;
 import lab4.game.TicTacToeGame;
 import lab4.ui.Console;
-
 import static lab4.game.Board.Status.InProgress;
+
 
 public class Main {
 

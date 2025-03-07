@@ -38,18 +38,18 @@ public class Board {
      * @return The current status of the game board
      */
     public Status getStatus() {
-        switch (this.getWinner()) {
-            case X: return Status.XWins;
-            case O: return Status.OWins;
-            case null: {
-                if (this.isFull()) {
-                    return Status.Draw;
-                } else {
-                    return Status.InProgress;
-                }
-            }
+        PlayerToken winner = this.getWinner();
+        if (winner == X) {
+            return Status.XWins;
+        } else if (winner == O) {
+            return Status.OWins;
+        } else if (this.isFull()) {
+            return Status.Draw;
         }
+        return Status.InProgress; // Always return at the end
     }
+
+
 
     /**
      * @param pos A board position
@@ -68,37 +68,51 @@ public class Board {
      * @return The column index in this.board corresponding to the given board position
      */
     private int colIdx(Position pos) {
-        return switch (pos.col()) {
-            case Left -> 0;
-            case Middle -> 1;
-            case Right -> 2;
-        };
+        switch (pos.col()) {
+            case Left:
+                return 0;
+            case Middle:
+                return 1;
+            case Right:
+                return 2;
+            default:
+                throw new IllegalArgumentException("Invalid column position");
+        }
+
     }
 
     /**
      * @return The PlayerToken for the winner of the game, or null if there is currently no winner
      */
     private PlayerToken getWinner() {
-        // Check the rows and columns
+        // Check rows
         for (int i = 0; i < 3; i++) {
-            // Check if the row is all the same
             if (board[i][0] != null && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
                 return board[i][0];
             }
-            // Check if the column is all the same
+        }
+
+        // Check columns
+        for (int i = 0; i < 3; i++) {
             if (board[0][i] != null && board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
                 return board[0][i];
             }
         }
-        // Check the diagonals
+
+        // Fix Diagonal 1 (Left to Right)
         if (board[0][0] != null && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
-            return board[0][2];
+            return board[0][0];
         }
+
+        // Fix Diagonal 2 (Right to Left)
         if (board[0][2] != null && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
             return board[0][2];
         }
-        return null;
+
+        return null; // No winner
     }
+
+
 
     /**
      * @return true if the board is full; false otherwise
@@ -127,6 +141,9 @@ public class Board {
      * @param pos A game board position
      */
     public void placeX(Position pos) {
+        if (isOccupiedAt(pos)) {
+            throw new IllegalArgumentException("Position already occupied");
+        }
         board[rowIdx(pos)][colIdx(pos)] = X;
     }
 
@@ -135,6 +152,9 @@ public class Board {
      * @param pos A game board position
      */
     public void placeO(Position pos) {
+        if (isOccupiedAt(pos)) {
+            throw new IllegalArgumentException("Position already occupied");
+        }
         board[rowIdx(pos)][colIdx(pos)] = O;
     }
 

@@ -1,4 +1,6 @@
 package lab6;
 
-public class Converter {
+public interface Converter {
+    double convert(double value);
+    double reverseConvert(double value);
 }

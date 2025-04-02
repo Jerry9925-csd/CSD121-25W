@@ -1,15 +1,16 @@
 package lab2;
 
 // Import the necessary classes
-import javax.imageio.ImageIO; // ImageIO is part of javax.imageio package, used for reading and writing image files.
-import javax.swing.*; // Swing is used for creating graphical user interfaces (GUIs), includes JFrame, JLabel, etc.
-import java.awt.*; // AWT (Abstract Window Toolkit) provides the layout and painting classes for GUI components.
-import java.io.IOException; // IOException is used for handling input-output exceptions.
-import java.io.InputStream; // InputStream is a part of java.io package, used for reading byte streams.
-import java.net.URI; // URI class is used to handle Uniform Resource Identifier (URI) references.
-import java.net.http.HttpClient; // HttpClient class is part of java.net.http for sending HTTP requests.
-import java.net.http.HttpRequest; // HttpRequest is used to construct HTTP request objects.
-import java.net.http.HttpResponse; // HttpResponse class handles HTTP responses.
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 public class AvatarGenerator { // This is the main class responsible for generating avatars.
 

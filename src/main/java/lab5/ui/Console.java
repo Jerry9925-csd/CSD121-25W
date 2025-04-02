@@ -2,7 +2,8 @@ package lab5.ui;
 
 import com.diogonunes.jcolor.AnsiFormat;
 import lab5.game.*;
-import lab5.players.*;
+import lab5.players.HumanPlayer;
+import lab5.players.Player;
 
 import java.util.Scanner;
 

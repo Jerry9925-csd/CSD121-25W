@@ -5,8 +5,9 @@ omola
  */
 
 import lab5.game.Board;
-import lab5.game.Position;
 import lab5.game.PlayerToken;
+import lab5.game.Position;
+
 import java.util.List;
 
 public class AIPlayer1 extends Player {

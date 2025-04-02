@@ -3,11 +3,13 @@ package lab5.players;
 /*
 circe
  */
+
 import lab5.game.Board;
-import lab5.game.Position;
-import java.util.List;
-import lab5.game.Row;
 import lab5.game.Col;
+import lab5.game.Position;
+import lab5.game.Row;
+
+import java.util.List;
 
 public class AIPlayer2 extends Player {
     public AIPlayer2() {

@@ -2,7 +2,6 @@ package lab5.players;
 
 import lab5.game.Board;
 import lab5.game.Position;
-import lab5.ui.Console;
 
 /**
  * Represents a player in the game.

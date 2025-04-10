@@ -1,0 +1,1 @@
+I used chatgpt Copilot completions and conversations to complete this lab.

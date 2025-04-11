@@ -1,4 +1,4 @@
-package lab6;
+package ca.saultcollege.hello_word;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main extends Application {
+public class main extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Dropdown for unit selection

@@ -1,4 +1,4 @@
-package lab6;
+package ca.saultcollege.hello_word;
 
 public class TemperatureConverter implements Converter {
     @Override

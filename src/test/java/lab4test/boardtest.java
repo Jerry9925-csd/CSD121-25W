@@ -1,9 +1,14 @@
-package lab4.game;
+package lab4test;
 
+import lab4.game.Board;
+import lab4.game.Col;
+import lab4.game.Position;
+import lab4.game.Row;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class BoardTest {
+class boardtest {
 
     @Test
     void boardIsInitiallyEmpty() {

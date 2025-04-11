@@ -1,8 +1,13 @@
-package lab5.players;
+package players;
 
-import lab5.game.*;
-import org.junit.jupiter.api.Test;
+import lab5.game.Board;
+import lab5.game.Col;
+import lab5.game.Position;
+import lab5.game.Row;
+import lab5.players.AIPlayer1;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AIPlayer1Test{

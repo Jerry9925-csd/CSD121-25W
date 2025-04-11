@@ -1,4 +1,4 @@
-module module_name {
+module ca.saultcollege.hello_word {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,10 +10,7 @@ module module_name {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
-    requires com.almasb.fxgl.core;
-    requires org.slf4j;
-    requires java.sql;
 
-
-
+    opens ca.saultcollege.hello_word to javafx.fxml;
+    exports ca.saultcollege.hello_word;
 }
